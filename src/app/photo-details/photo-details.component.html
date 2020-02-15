@@ -1,0 +1,32 @@
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{(info|async)?.name}}
+      </h1>
+      <h2 class="subtitle">
+        {{(info|async)?.date}}
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section ">
+
+  <div class="columns is-multiline">
+    <div *ngFor="let photo of photos| async;index as index" class="column is-one-third">
+      <div class="box">
+        <!--        *ngIf="photo.type=='photo'"-->
+        <article class="media">
+          <div class="media-content p-t-4 p-b-4  is-relative">
+
+            <figure class="image is-3by2 rotated">
+              <img src="{{photo.downloadURL}}" (click)="open(index)">
+            </figure>
+          </div>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

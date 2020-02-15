@@ -1,0 +1,25 @@
+<section class="section ">
+
+  <div class="columns is-centered ">
+    <div  class="column is-one-third">
+      <div class="box has-text-centered">
+        <img src="assets/icons/photo_camera.svg" class="login-img" alt="">
+        <div class="field has-text-left">
+          <label class="label">email</label>
+          <div class="control">
+            <input  class="input" type="text" placeholder="name@example.com" [(ngModel)]="credentials.email" required>
+          </div>
+        </div>
+        <div class="field has-text-left">
+          <label class="label">password</label>
+          <div class="control">
+            <input  class="input" type="password" placeholder="Password" [(ngModel)]="credentials.password" required>
+          </div>
+        </div>
+        <div class="has-text-right">
+          <button class="button is-info" (click)="login()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

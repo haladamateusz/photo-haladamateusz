@@ -1,0 +1,71 @@
+<section class="section">
+    <div class="columns">
+      <div class="column is-two-fifths ">
+        <div class="field has-text-left">
+          <label class="label">Imię i nazwisko modelki</label>
+          <div class="control">
+            <input [(ngModel)]="modelName" class="input" type="text" placeholder="Podaj imię i nazwisko modelki">
+          </div>
+          <p class="help">Wpisujesz tu imię koleżanki, której robiłeś zdjęcia</p>
+        </div>
+        <div class="field has-text-left">
+          <label class="label">Nazwa galerii</label>
+          <div class="control">
+            <input [(ngModel)]="collectionName" class="input" type="text" placeholder="Podaj nazwę galerii">
+          </div>
+          <p class="help">To będzie służyć do stworzenia linka example.com/<strong>collectionName</strong></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="file">
+      <label class="file-label">
+
+
+        <input class="file-input" type="file" multiple (change)="getThumbnailDetails($event)">
+
+
+        <span class="file-cta">
+            <span class="file-icon">
+              <img class="icon-img" src="assets/icons/cloud-upload-outline.svg" alt="">
+            </span>
+            <span class="file-label">
+              Wrzuć miniaturkę
+            </span>
+          </span>
+      </label>
+    </div>
+
+    <div class="dropzone"
+         dropzone
+         (hovered)="toggleHover($event)"
+         (dropped)="onDrop($event)"
+         [class.hovering]="isHovering">
+
+
+      <h3>AngularFire Drop Zone</h3>
+      <p>Drag and Drop a File</p>
+      <div class="file">
+        <label class="file-label">
+
+
+          <input class="file-input" type="file" multiple (change)="getFileDetails($event)">
+
+
+          <span class="file-cta">
+            <span class="file-icon">
+              <img class="icon-img-2" src="assets/icons/cloud-upload-outline.svg" alt="">
+            </span>
+            <span class="file-label">
+              or choose a file…
+            </span>
+          </span>
+        </label>
+      </div>
+
+    </div>
+    <div class="has-text-right">
+      <button class="button is-info" [disabled]="!modelName || !collectionName" (click)="uploadFiles()">Upload</button>
+    </div>
+</section>

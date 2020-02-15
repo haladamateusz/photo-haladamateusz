@@ -1,0 +1,85 @@
+<section class="hero is-success is-fullheight">
+  <div class="hero-body">
+    <div class="container container-margin">
+      <div class="columns is-vcentered reverse-row-order">
+        <div class="column is-four-fifths">
+          <h1 class="title">Welcome to my website, dedicated to my own photos.</h1>
+          <h2 class="subtitle">
+            Here, from time to time I post some photos of my friends, dogs, cats, homeless etc.
+            Another line of text yo, no idea what else I could write there. The yo at the begging of this line looks
+            weird wtf</h2>
+        </div>
+        <div class="column is-one-fifth is-pulled-right">
+          <img class="hero-camera" src="assets/icons/photo_camera.svg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section first-section">
+
+  <div  class="columns is-multiline">
+    <div *ngFor="let gallery of galleries | async; index as i" class="column is-one-third">
+      <div class="box">
+
+        <article *ngIf="i%4==0" class="media">
+          <div class="media-content p-t-4 p-b-4  is-relative">
+            <p><span class="content-sticker-1 has-background-info has-text-white-bis p-r-4 p-l-2 is-pulled-left">  {{gallery.modelName}}</span>
+            </p>
+            <div [routerLink]="['/gallery', gallery.collectionName]"  class="content">
+              <figure class="image is-3by2 rotated-1">
+                <img src="{{gallery.downloadURL}}">
+              </figure>
+            </div>
+            <p><span
+              class="content-text-1 has-background-info has-text-white-bis p-r-4 p-l-2 is-pulled-right">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            </p>
+          </div>
+        </article>
+        <article *ngIf="i%4==1" class="media">
+          <div class="media-content p-t-4 p-b-4  is-relative">
+            <p><span class="content-sticker-2 has-background-success has-text-white-bis p-r-4 p-l-2 is-pulled-left">  {{gallery.modelName}}</span>
+            </p>
+            <div [routerLink]="['/gallery', gallery.collectionName]"  class="content">
+              <figure class="image is-3by2 rotated-2">
+                <img src="{{gallery.downloadURL}}">
+              </figure>
+            </div>
+            <p><span
+              class="content-text-2 has-background-success has-text-white-bis p-r-4 p-l-2 is-pulled-right">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            </p>
+          </div>
+        </article>
+        <article *ngIf="i%4==2" class="media">
+          <div class="media-content p-t-4 p-b-4  is-relative">
+            <p><span class="content-sticker-3 has-background-info has-text-white-bis p-r-4 p-l-2 is-pulled-left">  {{gallery.modelName}}</span>
+            </p>
+            <div [routerLink]="['/gallery', gallery.collectionName]"  class="content">
+              <figure class="image is-3by2 rotated-3">
+                <img src="{{gallery.downloadURL}}">
+              </figure>
+            </div>
+            <p><span
+              class="content-text-3 has-background-info has-text-white-bis p-r-4 p-l-2 is-pulled-right">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            </p>
+          </div>
+        </article>
+        <article *ngIf="i%4==3" class="media">
+          <div class="media-content p-t-4 p-b-4  is-relative">
+            <p><span class="content-sticker-4 has-background-success has-text-white-bis p-r-4 p-l-2 is-pulled-left">  {{gallery.modelName}}</span>
+            </p>
+            <div [routerLink]="['/gallery', gallery.collectionName]"  class="content">
+              <figure class="image is-3by2 rotated-4">
+                <img src="{{gallery.downloadURL}}">
+              </figure>
+            </div>
+            <p><span
+              class="content-text-4 has-background-success has-text-white-bis p-r-4 p-l-2 is-pulled-right">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
