@@ -9,7 +9,6 @@ import {AngularFirestore, AngularFirestoreModule, FirestoreSettingsToken} from '
 import {LightboxModule} from 'ngx-lightbox';
 import {environment} from '../environments/environment';
 import {AngularFireStorage, AngularFireStorageModule} from '@angular/fire/storage';
-import { LoginComponent } from './photo/login/login.component';
 import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
 import {FormsModule} from '@angular/forms';
 import {AuthService} from './services/auth.service';
