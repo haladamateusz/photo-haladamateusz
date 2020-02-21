@@ -18,10 +18,20 @@ export class LoginComponent {
 
   }
 
-  login() {
-    this.authService.login(this.credentials)
-      .then(() => this.router.navigate(['/upload']))
-      .catch(error => console.log(error.message));
+  // login() {
+  //   this.authService.login()
+  //     .then(() => this.router.navigate(['/upload']))
+  //     .catch(error => console.log(error.message));
+  // }
+
+  signInWithEmail() {
+    this.authService.signInRegular(this.credentials)
+      .then((res) => {
+        console.log(res);
+
+        this.router.navigate(['dashboard']);
+      })
+      .catch((err) => console.log('error: ' + err));
   }
 
 }

@@ -67,7 +67,7 @@ export class PhotosService {
       year: today.getFullYear(),
       month: today.getMonth() >= 9 ? today.getMonth() + 1 : `0${today.getMonth() + 1}`,
       day: today.getDate()
-    }
+    };
     this.uploadThumbnail(date, uploadData);
     this.uploadFiles(date, uploadData);
     console.log('wyslane mordeczko');

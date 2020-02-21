@@ -6,6 +6,7 @@ import {PhotoDetailsComponent} from '../photo-details/photo-details.component';
 import {PhotoUploadComponent} from '../photo-upload/photo-upload.component';
 import {FormsModule} from '@angular/forms';
 import {DropzoneDirective} from '../dropzone.directive';
+import {SharedModule} from '../shared/shared.module';
 
 
 
@@ -15,6 +16,7 @@ import {DropzoneDirective} from '../dropzone.directive';
     CommonModule,
     RouterModule,
     FormsModule,
+    SharedModule
   ],
   exports: [PhotosComponent, PhotoDetailsComponent, PhotoUploadComponent]
 })

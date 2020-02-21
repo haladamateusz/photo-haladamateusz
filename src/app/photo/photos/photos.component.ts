@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {map} from 'rxjs/operators';
 import {Gallery} from "../../models/galleries.model";
-import {PhotosService} from "../core/services/photos.service";
+import {PhotosService} from "../services/photos.service";
 
 
 @Component({
