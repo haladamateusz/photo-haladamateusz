@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {PhotosComponent} from './photos/photos.component';
-import {PhotoDetailsComponent} from './photo-details/photo-details.component';
-import {PhotoUploadComponent} from './photo-upload/photo-upload.component';
-import {LoginComponent} from './core/login/login.component';
-import {AuthGuard} from './core/services/auth.guard';
+import {PhotosComponent} from './photo/photos/photos.component';
+import {PhotoDetailsComponent} from './photo/photo-details/photo-details.component';
+import {PhotoUploadComponent} from './photo/photo-upload/photo-upload.component';
+import {LoginComponent} from './photo/login/login.component';
+import {AuthGuard} from './services/auth.guard';
 import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
 
 

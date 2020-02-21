@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {PhotosService} from '../services/photos.service';
+import {PhotosService} from '../../services/photos.service';
 import {Observable} from 'rxjs';
-import {Photos} from '../../models/photos.model';
-import {PhotoInfo} from '../../models/photoInfo.model';
+import {Photos} from '../../../models/photos.model';
+import {PhotoInfo} from '../../../models/photoInfo.model';
 import {Lightbox, LightboxConfig} from 'ngx-lightbox';
 
 @Component({

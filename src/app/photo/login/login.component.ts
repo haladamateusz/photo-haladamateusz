@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthService} from '../services/auth.service';
+import {Component} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -18,20 +18,20 @@ export class LoginComponent {
 
   }
 
-  // login() {
-  //   this.authService.login()
-  //     .then(() => this.router.navigate(['/upload']))
-  //     .catch(error => console.log(error.message));
-  // }
-
-  signInWithEmail() {
-    this.authService.signInRegular(this.credentials)
-      .then((res) => {
-        console.log(res);
-
-        this.router.navigate(['dashboard']);
-      })
-      .catch((err) => console.log('error: ' + err));
+  login() {
+    this.authService.login(this.credentials)
+      .then(() => this.router.navigate(['/upload']))
+      .catch(error => console.log(error.message));
   }
+
+  // signInWithEmail() {
+  //   this.authService.login(this.credentials)
+  //     .then((res) => {
+  //       //console.log(res);
+  //
+  //       this.router.navigate(['/upload']);
+  //     })
+  //     .catch((err) => console.log('error: ' + err));
+  // }
 
 }

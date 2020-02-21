@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {Gallery} from '../../../models/galleries.model';
+import {Gallery} from '../../models/galleries.model';
 import {map, mergeMap} from 'rxjs/operators';
-import {Photos} from '../../../models/photos.model';
-import {PhotoInfo} from '../../../models/photoInfo.model';
+import {Photos} from '../../models/photos.model';
+import {PhotoInfo} from '../../models/photoInfo.model';
 import {AngularFireStorage, AngularFireUploadTask} from '@angular/fire/storage';
 
 @Injectable({

@@ -5,14 +5,17 @@
       Photo.haladamateusz.com
     </a>
   </div>
-<!--  <div class="navbar-end">-->
-<!--    <div class="navbar-item">-->
-<!--      <div class="buttons">-->
-<!--        <a (click)="logout()" class="button is-info">-->
-<!--          Logout-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div *ngIf="user?.email!==null" class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a (click)="upload()" class="button is-info">
+          Upload
+        </a>
+        <a (click)="logOut()" class="button is-info">
+          Logout
+        </a>
+      </div>
+    </div>
+  </div>
 
 </nav>
